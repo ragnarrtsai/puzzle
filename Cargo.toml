@@ -1,0 +1,15 @@
+[package]
+name = "puzzle"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+macroquad = "0.4"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp"] }
+
+# 圖片解碼在 debug build 下慢得誇張，把相依套件開最佳化
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3

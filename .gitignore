@@ -1,0 +1,7 @@
+/target
+
+# 玩家自己的素材與遊戲進度，不是程式的一部分
+/images/
+*.completed
+
+.DS_Store
